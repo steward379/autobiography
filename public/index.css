@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 10px;
+}
+
+.waterfall {
+    width: 100%;
+    margin: 0px auto;
+    column-count: 5;
+    column-gap: 10px;
+}
+
+.item {
+    background-color: lightgrey;
+    margin: 0 auto 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    break-inside: avoid;
+    /*定義頁面、列或是區域發生中斷時的元素表現方式。 
+      auto->元素中斷、avoid->元素不中斷 */
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+} 
+
+/* .waterfall {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .waterfall .item {
+    height: 100px;
+    padding: 4px;
+    cursor: pointer;
+  }
+  .waterfall .item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    transition: transform 0.3s ease-in-out;
+  }
+  .unsplash-image-container .unsplash-image:hover img {
+    transform: scale(1.03);
+  }
+  @supports (grid-template-rows: masonry) {
+    .waterfall {
+      grid-template-rows: masonry;
+    }
+    .waterfall .item {
+      height: auto;
+    }
+  } */

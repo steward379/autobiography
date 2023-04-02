@@ -1,0 +1,14 @@
+{
+  "name": "autobiography",
+  "version": "1.0.0",
+  "description": "An autobiography about my resume",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Steward Tsou",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
