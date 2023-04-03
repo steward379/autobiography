@@ -3,6 +3,11 @@ body {
     padding: 10px;
 }
 
+[data-title] {
+  font-size: 30px;
+  text-align: center;
+}
+
 .waterfall {
     width: 100%;
     margin: 0px auto;
