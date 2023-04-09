@@ -1,21 +1,37 @@
-body {
-    margin: 0;
-    padding: 15px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Redacted+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Redacted+Script&display=swap');
 
+body {
+  margin: 0;
+  padding: 0 15px;
+}
+li {
+  list-style: none;
+}
 a {
-    text-decoration: none;
+  text-decoration: none;
+}
+a:hover{
+  color: rgb(34, 164, 71);
+  transition: ease-in-out 0.3s;
+}
+/* the free icons CDN online */
+ion-icon {
+  padding: 0 3px;
 }
 button {
-  border:none;
+  border: none;
   border-radius: 10px;
   margin: 5px;
   padding: 3px;
   background-color: rgba(50, 224, 254, 0.3);
-  cursor:pointer;
+  cursor: pointer;
+  font-size: 1rem;
 }
 button:hover {
-  background-color: rgba(247, 113, 113, 0.3);
+  background-color: rgba(117, 103, 242, 0.3);
+  transition: ease-in-out 0.3s;
+  font-weight: 700;
 }
 
 [data-title] {
@@ -23,6 +39,7 @@ button:hover {
   text-align: center;
   padding: 20px 0 0 0;
   margin-bottom: -10px;
+  font-family: 'Arvo', cursive;
 }
 .contacts {
   display: flex;
@@ -37,11 +54,8 @@ button:hover {
   font-size: 1rem;
   padding: 10px;
 }
-.contacts  a:hover{
-  color: rgb(34, 164, 71);
-  transition: ease-in-out 0.3s;
-}
 
+/* pure css easter egg */
 [data-more] {
   padding: 5px 20px;
 }
@@ -54,6 +68,12 @@ button:hover {
 #more-a:target{
   display: none;
 }
+
+#more-a:target ~ .item{
+  display: none;
+} 
+
+/* container */
 .waterfall {
     width: 100%;
     margin: 0px auto;
@@ -62,16 +82,13 @@ button:hover {
 }
 
 .item {
-    /* border: 2px dotted rgb(0, 0, 0); */
     border-radius: 15px;
     margin: 0 auto 20px;
     padding: 10px 20px;
-    cursor: pointer;
     box-sizing: border-box;
     text-align: left;
     break-inside: avoid;
     background-color: #fff;
-
     box-shadow: 0 1px 2px rgba(239, 176, 176, 0.06), 
                 0 2px 4px rgba(224, 135, 135, 0.06), 
                 0 4px 8px rgba(0, 0, 0, 0.06), 
@@ -79,14 +96,11 @@ button:hover {
                 0 16px 32px rgba(0, 0, 0, 0.06), 
                 0 32px 64px rgba(238, 164, 164, 0.12);
     transition: box-shadow 0.3s ease-in-out;
-    /*定義頁面、列或是區域發生中斷時的元素表現方式。 
-    auto->元素中斷、avoid->元素不中斷 */
+    /*auto：中斷, avoid：不中斷 */
 }
-
 .item h2 {
   font-size: 1.3rem;
 }
-
 .item h2:before {
   content: "🌊";
   color: white;
@@ -96,8 +110,8 @@ button:hover {
   height: 30px;
   border-radius: 50%;
   background-color: rgba(52, 180, 195, 0.2);
+  background: radial-gradient(circle, rgba(242, 208, 208, 0.2) 0%, rgba(55, 243, 237, 0.5) 50%, rgba(35, 26, 202, 0.7) 100%);
 }
-
 .item img {
     width: 75%;
     object-fit: cover;
@@ -106,12 +120,17 @@ button:hover {
 .item li img {
   width: 50%;
 } 
-.item li img:hover {
-  content: url("./img/zuzugo-avatar.svg");
-} 
 .item:hover img {
   transform: scale(1.1);
 }
+.arrange-time:before {
+  content: "🕒";
+  text-align: center;
+  border-radius: 100%;
+  background-color: rgba(234, 144, 54, 0.2);
+}
+
+/* micro-adjustment for the shadows */
 
 .item:hover {
   box-shadow: 0 1px 2px rgba(192, 250, 214, 0.3), 
@@ -122,7 +141,6 @@ button:hover {
               0 32px 64px rgba(200, 251, 196, 0.24);
   transition: ease-in-out 0.2s;
 }
-
 .item:active {
   box-shadow: 0 1px 2px rgba(240, 213, 62, 0.12), 
               0 2px 4px rgba(230, 226, 36, 0.12), 
@@ -132,6 +150,14 @@ button:hover {
               0 32px 64px rgba(237, 140, 28, 0.24);
 }
 
+/* the special Logo of our project */
+
+#zuzugo {
+  margin: -30px 0;
+}
+#zuzugo:hover {
+  content: url("./img/zuzugo-avatar.svg");
+} 
 
 
 @media (max-width: 768px) { 
@@ -152,24 +178,66 @@ button:hover {
   } 
 }
 
+/* dark mode easter egg */
+
+.bright-mode {
+  transition: ease-in 0.3s;
+}
+
+.dark-mode {
+  transition: ease-in 0.1s;
+  background-color: #120a4f;
+  color: rgb(216, 215, 215);
+}
+.dark-mode h1{
+  font-family: 'Redacted Script';
+  font-size: 40px;
+}
+.dark-mode [data-sub]:before {
+  content: "WeHelp! Application 🧛 ";
+}
+.dark-mode .item {
+  background-color: #32229b;
+  color:rgb(194, 193, 193)
+}
+.dark-mode button {
+  border: white solid 1px;
+  background-color: rgb(208, 205, 205);
+  color:rgb(237, 28, 28);
+}
+.dark-mode button:hover {
+  background-color: rgb(230, 75, 75);
+  color:rgb(233, 223, 223);
+}
+.dark-mode ion-icon  {
+  color:rgb(194, 193, 193);
+}
+.dark-mode h2:before  {
+  content: "🧛";
+  background: radial-gradient(circle, rgba(255, 214, 10, 1) 0%, rgba(238, 137, 37, 0.7) 70%, rgb(141, 46, 46, 0.6) 100%);
+}
+.dark-mode #dark-mode-btn {
+  color: rgb(227, 208, 42);
+}
+.dark-mode ion-icon:hover{
+  color: rgb(222, 155, 22);
+  transition: ease-in-out 0.3s;
+}
+.dark-mode footer:after {
+  content: "darkmode triggered!";
+}
+.dark-mode footer a {
+  color: white;
+}
+.dark-mode footer a:hover {
+  color: rgb(204, 49, 49);
+}
+
+/* the above is a newer feature supported by HTML5 */
+
 /* .waterfall {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-  }
-  .waterfall .item {
-    height: 100px;
-    padding: 4px;
-    cursor: pointer;
-  }
-  .waterfall .item img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    border-radius: 6px;
-    transition: transform 0.3s ease-in-out;
-  }
-  .unsplash-image-container .unsplash-image:hover img {
-    transform: scale(1.03);
   }
   @supports (grid-template-rows: masonry) {
     .waterfall {
@@ -180,4 +248,3 @@ button:hover {
     }
   } */
 
-  /* comments here+顏文字 */
