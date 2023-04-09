@@ -1,2 +1,3 @@
 # autobiography
-autobiography about the full stack journey
+autobiography about the WeHelp! Application
+
