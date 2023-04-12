@@ -1,13 +1,16 @@
-const footer = () => {
+import React from 'react';
 
-    let footer = document.createElement("footer");
-    let para = document.createElement("p");
-    para.innerHTML =` © 2023 by <a href="https://linktr.ee/murmurline" target="_blank">Steward Tsou`
-    footer.appendChild(para);
+const Footer = () => {
+    return (
+      <footer>
+        <p>
+          © 2023 by{' '}
+          <a href="https://linktr.ee/murmurline" target="_blank" rel="noopener noreferrer">
+            Steward Tsou
+          </a>
+        </p>
+      </footer>
+    );
+  };
 
-    console.log(footer);
-        
-    return footer;
-}
-
-export default footer;
+export default Footer;

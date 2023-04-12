@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Redacted+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Redacted+Script&display=swap");
 body {
   margin: 0;
   padding: 0 15px;
@@ -33,7 +35,7 @@ button {
 }
 
 button:hover {
-  background-color: rgba(247, 113, 113, 0.3);
+  background-color: rgba(117, 103, 242, 0.3);
   transition: ease-in-out 0.3s;
   font-weight: 700;
 }
@@ -43,6 +45,7 @@ button:hover {
   text-align: center;
   padding: 20px 0 0 0;
   margin-bottom: -10px;
+  font-family: 'Arvo';
 }
 
 .contacts {
@@ -96,7 +99,7 @@ button:hover {
   box-sizing: border-box;
   text-align: left;
   break-inside: avoid;
-  background-color: #eeebeb;
+  background-color: #fff;
   box-shadow: 0 1px 2px rgba(239, 176, 176, 0.06), 0 2px 4px rgba(224, 135, 135, 0.06), 0 4px 8px rgba(0, 0, 0, 0.06), 0 8px 16px rgba(223, 145, 145, 0.06), 0 16px 32px rgba(0, 0, 0, 0.06), 0 32px 64px rgba(238, 164, 164, 0.12);
   transition: box-shadow 0.3s ease-in-out;
   /*auto：中斷, avoid：不中斷 */
@@ -115,6 +118,7 @@ button:hover {
   height: 30px;
   border-radius: 50%;
   background-color: rgba(52, 180, 195, 0.2);
+  background: radial-gradient(circle, rgba(242, 208, 208, 0.2) 0%, rgba(55, 243, 237, 0.5) 50%, rgba(35, 26, 202, 0.7) 100%);
 }
 
 .item img {
@@ -127,18 +131,24 @@ button:hover {
   width: 50%;
 }
 
-.item:hover {
-  /* micro-adjustment for the shadows */
-  box-shadow: 0 1px 2px rgba(192, 250, 214, 0.3), 0 2px 4px rgba(188, 246, 191, 0.3), 0 4px 8px rgba(197, 250, 197, 0.3), 0 8px 16px rgba(207, 248, 195, 0.3), 0 16px 32px rgba(192, 244, 197, 0.3), 0 32px 64px rgba(200, 251, 196, 0.24);
-  transition: ease-in-out 0.2s;
-}
-
 .item:hover img {
   transform: scale(1.1);
 }
 
+.arrange-time:before {
+  content: "🕒";
+  text-align: center;
+  border-radius: 100%;
+  background-color: rgba(234, 144, 54, 0.2);
+}
+
+/* micro-adjustment for the shadows */
+.item:hover {
+  box-shadow: 0 1px 2px rgba(192, 250, 214, 0.3), 0 2px 4px rgba(188, 246, 191, 0.3), 0 4px 8px rgba(197, 250, 197, 0.3), 0 8px 16px rgba(207, 248, 195, 0.3), 0 16px 32px rgba(192, 244, 197, 0.3), 0 32px 64px rgba(200, 251, 196, 0.24);
+  transition: ease-in-out 0.2s;
+}
+
 .item:active {
-  /* micro-adjustment for the shadows */
   box-shadow: 0 1px 2px rgba(240, 213, 62, 0.12), 0 2px 4px rgba(230, 226, 36, 0.12), 0 4px 8px rgba(218, 122, 44, 0.12), 0 8px 16px rgba(226, 158, 22, 0.12), 0 16px 32px rgba(227, 136, 39, 0.12), 0 32px 64px rgba(237, 140, 28, 0.24);
 }
 
@@ -148,7 +158,7 @@ button:hover {
 }
 
 #zuzugo:hover {
-  content: url("../public/assets/zuzugo-avatar.svg");
+  content: url("/assets/zuzugo-avatar.svg");
 }
 
 @media (max-width: 768px) {
@@ -170,10 +180,23 @@ button:hover {
 }
 
 /* dark mode easter egg */
+.bright-mode {
+  transition: ease-in 0.3s;
+}
+
 .dark-mode {
-  transition: ease-in-out 0.5s;
+  transition: ease-in 0.1s;
   background-color: #120a4f;
   color: #d8d7d7;
+}
+
+.dark-mode h1 {
+  font-family: 'Redacted Script';
+  font-size: 40px;
+}
+
+.dark-mode [data-sub]:before {
+  content: "WeHelp! Application 🧛 ";
 }
 
 .dark-mode .item {
@@ -183,8 +206,13 @@ button:hover {
 
 .dark-mode button {
   border: white solid 1px;
-  background-color: white;
-  color: #c2c1c1;
+  background-color: #d0cdcd;
+  color: #ed1c1c;
+}
+
+.dark-mode button:hover {
+  background-color: #e64b4b;
+  color: #e9dfdf;
 }
 
 .dark-mode ion-icon {
@@ -193,14 +221,20 @@ button:hover {
 
 .dark-mode h2:before {
   content: "🧛";
+  background: radial-gradient(circle, #ffd60a 0%, rgba(235, 145, 55, 0.7) 50%, rgba(141, 46, 46, 0.6) 100%);
 }
 
 .dark-mode #dark-mode-btn {
   color: #e3d02a;
 }
 
+.dark-mode ion-icon:hover {
+  color: #de9b16;
+  transition: ease-in-out 0.3s;
+}
+
 .dark-mode footer:after {
-  content: "darkmode triggered!";
+  content: "dark mode triggered!";
 }
 
 .dark-mode footer a {
@@ -211,7 +245,7 @@ button:hover {
   color: #cc3131;
 }
 
-/* the above is a newer feature supported by HTML5 */
+/* the below is a newer feature supported by HTML5 */
 /* .waterfall {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

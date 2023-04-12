@@ -12,12 +12,15 @@
   "author": "Steward Tsou",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
     "parcel": "^2.8.3",
     "parcel-bundler": "^1.12.5",
-    "sass": "^1.60.0"
+    "sass": "^1.62.0"
   },
   "dependencies": {
     "animate.css": "^4.1.1",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
