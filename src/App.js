@@ -1,8 +1,8 @@
 import React from 'react';
 
-import AppHead from "./components/appHead";
-import Waterfall from "./components/waterfall";
-import Footer from "./components/footer";
+import AppHead from "./components/AppHead";
+import Waterfall from "./components/Waterfall";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
