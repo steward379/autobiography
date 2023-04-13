@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel public/index.html",
-    "watch": "parcel watch",
-    "build": "parcel build"
+    "watch": "parcel watch public/index.html",
+    "build": "parcel build public/index.html"
   },
   "author": "Steward Tsou",
   "license": "ISC",
