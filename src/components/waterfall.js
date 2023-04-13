@@ -1,4 +1,5 @@
 import React from "react";
+import dalleDevImg from "../assets/dall-e-dev.jpeg";
 
 const Waterfall = () => {
     const itemData = [
@@ -20,7 +21,7 @@ const Waterfall = () => {
           <h2>{data.title}</h2>
           <p>{data.content}</p>
           {index === 0 && (
-            <img src="../public/assets/dall-e-dev.jpeg" alt="Dalle-dev" />
+            <img src={dalleDevImg} alt="Dalle-dev" />
           )}
           {index === 1 && (
             <ul>
