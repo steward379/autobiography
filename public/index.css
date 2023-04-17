@@ -146,7 +146,7 @@ button:hover {
 }
 
 #zuzugo:hover {
-  content: url("../src/assets/zuzugo-avatar.svg");
+  content: url(../src/assets/zuzugo-avatar.svg);
 }
 
 @media (max-width: 768px) {
